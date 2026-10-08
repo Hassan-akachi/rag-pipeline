@@ -137,3 +137,31 @@ Each `id` must be unique. If a fact contains a comma, wrap it in double quotes. 
 - OpenAI is currently disabled in this project, so everything except Gemini embeddings runs locally.
 - ChromaDB runs in memory, so the database is rebuilt every time the app starts.
 - The facts are a small sample for learning purposes. Some, like the number of league titles, will change over time.
+-                  Your Question
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Streamlit App   │
+              └────────┬────────┘
+                       │
+                       ▼
+             Local Chroma Embedding
+             ┌─────────────────────┐
+             │ Chroma Default      │
+             │ or Nomic/Ollama     │
+             │ or Gemini           │
+             └──────────┬──────────┘
+                        │
+                        ▼
+                  ChromaDB
+                        │
+                  Similar facts
+                        │
+                        ▼
+                Augmented Prompt
+                        │
+                        ▼
+                 Ollama Llama 3.2
+                        │
+                        ▼
+                     Answer
