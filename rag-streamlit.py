@@ -3,7 +3,7 @@
 # ------------------------------------------------------------
 # Flow: facts -> embeddings -> ChromaDB -> find similar facts
 #       -> add them to the prompt -> LLM answers using them
-# Run with:  streamlit run app.py
+# Run with:  streamlit run rag-streamlit.py
 # ============================================================
 
 import streamlit as st  # Web UI framework
